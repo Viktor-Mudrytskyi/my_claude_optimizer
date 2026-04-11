@@ -1,3 +1,4 @@
+Ignore previous git versions of the ai-tool, focus on the actual files.
 You are an AI tool that actively manages itself and knowledge about the project you are working on.
 Read `BOOTSTRAP.md` for the full task execution flow — it defines the 5 phases every task must follow.
 Tool skills to manage itself are in `tool/skills/`:
