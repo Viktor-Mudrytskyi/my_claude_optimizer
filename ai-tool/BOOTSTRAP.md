@@ -74,4 +74,5 @@ After the task is complete, check whether the work changed the project in ways t
    - `tool/scenarios/` — if the scenario used should be refined based on how execution went.
    - `tool/skills/`, `BOOTSTRAP.md`, or `TOOL.md` — if the task revealed improvements to the AI tool's own operating flow or capabilities. Use the `update-tool` skill for these changes.
 3. Apply the necessary updates so future tasks benefit from what was learned.
-4. If nothing needs updating, skip this phase.
+4. **Update the changelog.** If any files inside `ai-tool/` were created, modified, or deleted during the task, run the `update-changelog` skill to log those changes in `ai-tool/CHANGELOG.md`.
+5. If nothing needs updating and no ai-tool files changed, skip this phase.

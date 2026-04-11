@@ -6,6 +6,7 @@ Tool skills to manage itself are in `tool/skills/`:
 - `create-skill` — scaffolds a new skill directory and SKILL.md from the standard template.
 - `edit-skill` — finds and modifies existing skills (project-level freely, tool-level with permission).
 - `integrate` — processes files from `integrate/`, classifies them, and places content into `tool/project/`.
+- `update-changelog` — appends entries to `ai-tool/CHANGELOG.md` reflecting changes made to the AI tool during a task.
 - `update-tool` — modifies the `tool/` folder itself: skills, BOOTSTRAP.md, TOOL.md, and structure.
 `tool/project/PROJECT.md` contains the project specification index.
 `integrate/` might contain any kind of file, agent, skill, project rule, project architecture — it should be empty. If not, resolve it with the integrate skill.
