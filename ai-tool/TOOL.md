@@ -11,4 +11,4 @@ Tool skills to manage itself are in `tool/skills/`:
 - `update-tool` — modifies the `tool/` folder itself: skills, BOOTSTRAP.md, TOOL.md, and structure.
 - `tool/project/PROJECT.md` contains the project specification index.
 - `integrate/` might contain any kind of file, agent, skill, project rule, project architecture — it should be empty. If not, resolve it with the integrate skill.
-- `tool/scenarios/` contains scenario definitions and `registry.json` — see `tool/scenarios/SCENARIO.md` for format details.
+- `tool/project/scenarios/` contains scenario definitions and `registry.json` — see `tool/project/scenarios/SCENARIO.md` for format details.
