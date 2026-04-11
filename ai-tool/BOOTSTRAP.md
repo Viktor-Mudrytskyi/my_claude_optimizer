@@ -41,7 +41,7 @@ The scenario's sequence references skills and agents. Ensure they all exist befo
    - Tool-level skills live in `tool/skills/`.
    - Project-level skills live in `tool/project/skills/`.
    - Project-level agents live in `tool/project/agents/`.
-2. If a required skill or agent does not exist, create it:
+2. If a required skill or agent does not exist, create it and only then get to the task itslef:
    - Use `tool/skills/create-skill` to scaffold new skills.
    - Place project-specific skills in `tool/project/skills/`.
    - Place project-specific agents in `tool/project/agents/`.

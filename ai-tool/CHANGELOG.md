@@ -1,5 +1,19 @@
 # AI Tool Changelog
 
+## 2026-04-11 (2)
+
+### Added
+
+- `tool/project/scenarios/create-feature-screen.md` — scenario for scaffolding new feature screens with Clean Architecture.
+- First entry in `tool/project/scenarios/registry.json`.
+
+### Updated
+
+- `tool/project/STACK.md` — added equatable, flutter_bloc, dartz dependencies.
+- `tool/project/rules/file-organization.md` — updated to reflect `lib/core/` and `lib/features/` structure.
+
+---
+
 ## 2026-04-11
 
 ### Added

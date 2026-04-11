@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "name": "create-feature-screen",
+    "file": "create-feature-screen.md",
+    "keywords": ["screen", "page", "feature", "view", "list", "new screen", "create screen"],
+    "description": "Create a new feature screen with full Clean Architecture scaffolding."
+  }
+]
