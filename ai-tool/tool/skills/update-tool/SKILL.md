@@ -16,7 +16,7 @@ description: Updates the ai-tool/tool/ folder — modifies TOOL.md, BOOTSTRAP.md
 
 2. **Inventory current state.** Read the relevant files to understand what exists:
    - `ai-tool/TOOL.md` — the tool's root instruction file.
-   - `ai-tool/BOOTSTRAP.md` — the task execution flow (5 phases).
+   - `ai-tool/BOOTSTRAP.md` — the task execution flow (all phases).
    - `ai-tool/tool/skills/` — all tool-level skill directories and their SKILL.md files.
    - `ai-tool/tool/project/scenarios/` — scenario definitions and registry.
 

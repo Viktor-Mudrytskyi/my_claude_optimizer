@@ -74,14 +74,14 @@ description: Processes files from ai-tool/integrate/, classifies them, places co
 
 ### Example: Merging similar skills
 
-**Incoming:** `ai-tool/integrate/flutter-bloc-patterns.md` (skill about Cubit/BLoC usage)
-**Existing:** `ai-tool/tool/project/skills/flutter-clean-architecture/SKILL.md` (already covers Cubit patterns)
+**Incoming:** `ai-tool/integrate/api-error-handling.md` (skill about API error patterns)
+**Existing:** `ai-tool/tool/project/skills/api-client/SKILL.md` (already covers error handling)
 
 **Result:**
 
-- Detected as **Skill**. Found merge candidate: `flutter-clean-architecture`.
-- Asked user: "Incoming `flutter-bloc-patterns` overlaps with existing `flutter-clean-architecture` (both cover Cubit patterns). Merge into one skill or keep separate?"
-- If merge: combined into `flutter-clean-architecture/SKILL.md`, checked line limit, split references into sub-files if needed.
+- Detected as **Skill**. Found merge candidate: `api-client`.
+- Asked user: "Incoming `api-error-handling` overlaps with existing `api-client` (both cover error handling). Merge into one skill or keep separate?"
+- If merge: combined into `api-client/SKILL.md`, checked line limit, split references into sub-files if needed.
 
 ### Example: File exceeding 150 lines after merge
 
@@ -99,12 +99,12 @@ description: Processes files from ai-tool/integrate/, classifies them, places co
 **File:** `ai-tool/integrate/notes.md`
 
 ```markdown
-We should consider switching to Riverpod for state management.
-The current approach won't scale past 10 screens.
+We should consider switching to a different ORM.
+The current approach won't scale past 50 tables.
 ```
 
 **Result:**
 
 - Detected as **Unknown** (could be architecture feedback, project info, or a personal note — no explicit instruction).
-- Asked the user: "Found `notes.md` — it discusses state management concerns. Should I update ARCHITECTURE.md, add it as project info, or skip it?"
+- Asked the user: "Found `notes.md` — it discusses database layer concerns. Should I update ARCHITECTURE.md, add it as project info, or skip it?"
 - Action depends on user response.

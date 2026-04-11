@@ -9,7 +9,10 @@ Clean Architecture (Uncle Bob) with feature-based modularization.
 ```
 flutter_application/
 ├── lib/
-│   └── main.dart              # App entry point
+│   ├── main.dart              # App entry point
+│   └── core/
+│       └── routing/
+│           └── app_router.dart # GoRouter configuration
 ├── android/                   # Android platform runner
 ├── ios/                       # iOS platform runner
 ├── web/                       # Web platform runner

@@ -37,7 +37,7 @@ Before doing any work, determine what project knowledge is needed for the task.
 
 ## Phase 3: Prepare Skills and Agents
 
-**MANDATORY GATE — do NOT skip to execution.** Every skill and agent referenced in the scenario must exist before you start Phase 4.
+**MANDATORY GATE — do NOT skip to execution.** Every skill and agent referenced in the scenario must exist before you start Phase 4. See `SKILLS-AND-AGENTS.md` for guidance on when to create a skill vs an agent and how to compose them.
 
 1. Extract the list of every skill and agent name referenced in the scenario's Sequence section.
 2. For each one, check if it exists:
@@ -57,7 +57,7 @@ Before doing any work, determine what project knowledge is needed for the task.
 
 ## Phase 4: Execute the Scenario
 
-Run the scenario sequence efficiently.
+Run the scenario sequence efficiently. See `SKILLS-AND-AGENTS.md` for parallel vs sequential execution patterns.
 
 1. Walk through the scenario steps in order.
 2. Where steps are independent of each other, launch agents in parallel to save time.
@@ -67,7 +67,21 @@ Run the scenario sequence efficiently.
 
 ---
 
-## Phase 5: Self-Update
+## Phase 5: Verify Changes
+
+After execution is complete, verify that all changes comply with the project rules and architecture.
+
+1. Load all rules from `tool/project/rules/*.md`.
+2. Review every file created or modified during Phase 4.
+3. Check each file against the loaded rules.
+4. If any rule violation or analysis issue is found — fix it immediately, then re-run this phase.
+5. Only proceed to Phase 6 when all checks pass.
+
+**You must not skip this phase. Moving to Phase 6 with known rule violations is not allowed.**
+
+---
+
+## Phase 6: Self-Update
 
 After the task is complete, check whether the work changed the project in ways that require updating the AI tool's own knowledge.
 

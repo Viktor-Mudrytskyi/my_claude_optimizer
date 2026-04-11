@@ -62,12 +62,12 @@ description: Finds and modifies existing skills based on a user request. Freely 
 
 ### Example: Updating a project skill
 
-**Request:** "Add a constraint to flutter-clean-architecture that entities must have documentation comments"
+**Request:** "Add a constraint to the API client skill that all requests must include a timeout"
 
 **Result:**
 
-- Found `ai-tool/tool/project/skills/flutter-clean-architecture/SKILL.md` — project-level skill.
-- Proposed change: add `- All entity classes must have documentation comments (///) on the class and public fields.` to the relevant section.
+- Found `ai-tool/tool/project/skills/api-client/SKILL.md` — project-level skill.
+- Proposed change: add `- All HTTP requests must include a timeout parameter.` to the Constraints section.
 - Applied directly. Reported change.
 
 ### Example: Modifying a tool skill
@@ -83,11 +83,11 @@ description: Finds and modifies existing skills based on a user request. Freely 
 
 ### Example: Ambiguous request
 
-**Request:** "Update the cubit section"
+**Request:** "Update the error handling section"
 
 **Result:**
 
 - Found two candidates:
-  1. `ai-tool/tool/project/skills/flutter-clean-architecture/SKILL.md` — has a Cubit section
-  2. `ai-tool/tool/project/skills/flutter-clean-architecture/references/CUBIT_PATTERN.md` — dedicated Cubit reference
-- Asked user: "Which file should I update — the main skill or the Cubit reference? And what specifically should change?"
+  1. `ai-tool/tool/project/skills/api-client/SKILL.md` — has an error handling section
+  2. `ai-tool/tool/project/rules/error-handling.md` — dedicated error handling rules
+- Asked user: "Which file should I update — the API client skill or the error handling rules? And what specifically should change?"

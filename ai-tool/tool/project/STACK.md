@@ -21,6 +21,7 @@
 - equatable ^2.0.7 — value equality for entities and states
 - flutter_bloc ^9.1.0 — state management (Cubit pattern)
 - dartz ^0.10.1 — functional programming (Either type for error handling)
+- go_router ^15.1.2 — declarative routing (GoRouter)
 - flutter_lints ^6.0.0 — lint rules (dev)
 - flutter_test (sdk) — testing framework (dev)
 
