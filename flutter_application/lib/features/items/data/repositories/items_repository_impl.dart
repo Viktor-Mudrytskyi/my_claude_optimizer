@@ -26,12 +26,7 @@ class ItemsRepositoryImpl implements ItemsRepository {
         endIndex - startIndex,
         (i) {
           final index = startIndex + i;
-          return Item(
-            id: 'item_$index',
-            title: 'Item #${index + 1}',
-            description: 'Description for item #${index + 1}',
-            createdAt: DateTime(2026, 1, 1).add(Duration(days: index)),
-          );
+          return _createItem(index);
         },
       );
 
@@ -43,5 +38,31 @@ class ItemsRepositoryImpl implements ItemsRepository {
     } catch (e) {
       return const Left(Failure(message: 'Failed to load items'));
     }
+  }
+
+  @override
+  FutureFailable<Item> getItemById({required String id}) async {
+    try {
+      await Future<void>.delayed(const Duration(milliseconds: 400));
+
+      final indexStr = id.split('_').last;
+      final index = int.tryParse(indexStr);
+      if (index == null || index < 0 || index >= _totalItems) {
+        return const Left(Failure(message: 'Item not found'));
+      }
+
+      return Right(_createItem(index));
+    } catch (e) {
+      return const Left(Failure(message: 'Failed to load item'));
+    }
+  }
+
+  static Item _createItem(int index) {
+    return Item(
+      id: 'item_$index',
+      title: 'Item #${index + 1}',
+      description: 'Description for item #${index + 1}',
+      createdAt: DateTime(2026, 1, 1).add(Duration(days: index)),
+    );
   }
 }

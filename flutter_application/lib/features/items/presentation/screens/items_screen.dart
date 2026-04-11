@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:flutter_application/features/items/presentation/cubit/items_cubit.dart';
 import 'package:flutter_application/features/items/presentation/widgets/item_card_widget.dart';
@@ -62,7 +63,10 @@ class _ItemsScreenState extends State<ItemsScreen> {
                     child: Center(child: CircularProgressIndicator()),
                   );
                 }
-                return ItemCardWidget(item: items[index]);
+                return ItemCardWidget(
+                  item: items[index],
+                  onTap: () => context.push('/items/${items[index].id}'),
+                );
               },
             ),
           ItemsError(:final message) => Center(

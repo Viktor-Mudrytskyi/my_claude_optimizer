@@ -7,4 +7,6 @@ abstract class ItemsRepository {
     required int page,
     required int pageSize,
   });
+
+  FutureFailable<Item> getItemById({required String id});
 }

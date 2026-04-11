@@ -4,14 +4,16 @@ import 'package:flutter_application/features/items/domain/entities/item.dart';
 
 class ItemCardWidget extends StatelessWidget {
   final Item item;
+  final VoidCallback? onTap;
 
-  const ItemCardWidget({super.key, required this.item});
+  const ItemCardWidget({super.key, required this.item, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: ListTile(
+        onTap: onTap,
         leading: CircleAvatar(
           child: Text(item.id.split('_').last),
         ),
