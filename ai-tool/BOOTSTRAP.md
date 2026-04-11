@@ -72,5 +72,6 @@ After the task is complete, check whether the work changed the project in ways t
    - `tool/project/rules/*.md` — if the task revealed or established new coding rules.
    - `tool/project/skills/*.md` — if an existing skill's behavior should change based on what was learned.
    - `tool/scenarios/` — if the scenario used should be refined based on how execution went.
+   - `tool/skills/`, `BOOTSTRAP.md`, or `TOOL.md` — if the task revealed improvements to the AI tool's own operating flow or capabilities. Use the `update-tool` skill for these changes.
 3. Apply the necessary updates so future tasks benefit from what was learned.
 4. If nothing needs updating, skip this phase.
