@@ -1,1 +1,2 @@
-Read `ai/ai-managed/FACADE.md`.
+Read `ai-tool/TOOL.md`.
+
