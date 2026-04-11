@@ -5,8 +5,8 @@ description: Processes files from ai-tool/integrate/, classifies them, moves con
 
 ## Inputs
 
-| Name | Required | Description                                                                 |
-| ---- | -------- | --------------------------------------------------------------------------- |
+| Name | Required | Description                                                                |
+| ---- | -------- | -------------------------------------------------------------------------- |
 | —    | —        | No inputs. The skill reads all files found in `ai-tool/integrate/` folder. |
 
 ## Behavior
@@ -15,14 +15,14 @@ description: Processes files from ai-tool/integrate/, classifies them, moves con
 
 2. **For each file**, read it and classify it into one of the following categories:
 
-   | Category         | Target location                                    | How to detect                                                                                                                                              |
-   | ---------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Skill**        | `ai-tool/tool/skills/<name>/SKILL.md`              | Has SKILL.md-style frontmatter (`name`, `description`) and sections like `## Behavior`, `## Output`, or the user explicitly names the file as a skill.     |
-   | **Rule**         | `ai-tool/tool/project/rules/<name>.md`             | Content describes coding conventions, linting overrides, naming rules, or style guidelines.                                                                |
-   | **Architecture** | `ai-tool/tool/project/ARCHITECTURE.md`             | Content describes layers, patterns, folder structure, state management, navigation, or data flow for the project.                                          |
-   | **Stack**        | `ai-tool/tool/project/STACK.md`                    | Content describes languages, frameworks, dependencies, platforms, or build tooling.                                                                        |
-   | **Project info** | `ai-tool/tool/project/PROJECT.md` or a sub-file    | Content describes project-level information that does not fit the other categories (e.g. roadmap, team conventions, environment setup).                     |
-   | **Unknown**      | —                                                  | Cannot confidently classify.                                                                                                                               |
+   | Category         | Target location                                 | How to detect                                                                                                                                          |
+   | ---------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | **Skill**        | `ai-tool/tool/skills/<name>/SKILL.md`           | Has SKILL.md-style frontmatter (`name`, `description`) and sections like `## Behavior`, `## Output`, or the user explicitly names the file as a skill. |
+   | **Rule**         | `ai-tool/tool/project/rules/<name>.md`          | Content describes coding conventions, linting overrides, naming rules, or style guidelines.                                                            |
+   | **Architecture** | `ai-tool/tool/project/ARCHITECTURE.md`          | Content describes layers, patterns, folder structure, state management, navigation, or data flow for the project.                                      |
+   | **Stack**        | `ai-tool/tool/project/STACK.md`                 | Content describes languages, frameworks, dependencies, platforms, or build tooling.                                                                    |
+   | **Project info** | `ai-tool/tool/project/PROJECT.md` or a sub-file | Content describes project-level information that does not fit the other categories (e.g. roadmap, team conventions, environment setup).                |
+   | **Unknown**      | —                                               | Cannot confidently classify.                                                                                                                           |
 
 3. **Determine intent.** Check whether the file contains an explicit instruction about what to do with its content. Look for directives like:
    - "Add this rule …"
@@ -33,7 +33,6 @@ description: Processes files from ai-tool/integrate/, classifies them, moves con
    If no explicit instruction is found, **ask the user** what to do with the file before proceeding. Present the file name, a brief content summary, and the detected category as context.
 
 4. **Place the content.**
-
    - **Skill** — Validate that the content follows the SKILL.md template structure (see `ai-tool/tool/skills/create-skill/TEMPLATE.md`). If it does, write it to `ai-tool/tool/skills/<name>/SKILL.md`. If it does not, reshape it to match the template before writing, preserving the original intent.
    - **Rule** — Derive a kebab-case file name from the rule topic. If a rule file on the same topic already exists, merge the new rules into it rather than overwriting.
    - **Architecture / Stack / Project info** — If the target file already exists, merge the new content into the existing file intelligently (update or add sections, do not duplicate). If it does not exist, create it.
@@ -88,13 +87,16 @@ description: Builds and deploys the Flutter app to the specified target.
 ---
 
 ## Behavior
+
 1. Run `flutter build` for the given platform.
 2. Deploy the artifact.
 
 ## Output
+
 Deployment result message.
 
 ## Constraints
+
 - Only deploy to staging unless explicitly told otherwise.
 ```
 
